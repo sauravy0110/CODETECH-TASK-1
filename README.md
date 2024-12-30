@@ -6,6 +6,19 @@ Duration: 12Dec2024 - 12 Jan2025
 
 
 Project Overview: Exploratory Data Analysis (EDA) for a Synthetic Classification Dataset
+
+Outputs:
+
+
+<img width="498" alt="Screenshot 2024-12-30 at 11 44 40 AM" src="https://github.com/user-attachments/assets/bedac46b-3248-49d9-8938-0e939371ccd7" />
+<img width="286" alt="Screenshot 2024-12-30 at 11 44 55 AM" src="https://github.com/user-attachments/assets/be8e012a-cdb2-4cd0-8a1d-91e111324b93" />
+<img width="403" alt="Screenshot 2024-12-30 at 11 45 08 AM" src="https://github.com/user-attachments/assets/56da8e40-9b3a-476a-8a13-16a6c2d1a2b6" />
+<img width="283" alt="Screenshot 2024-12-30 at 11 45 33 AM" src="https://github.com/user-attachments/assets/27f59ebc-7768-475c-a493-5dc3279a4546" />
+<img width="326" alt="Screenshot 2024-12-30 at 11 45 48 AM" src="https://github.com/user-attachments/assets/1a67153c-d108-4da7-a109-b62163d9106f" />
+<img width="424" alt="Screenshot 2024-12-30 at 11 46 11 AM" src="https://github.com/user-attachments/assets/b49b96a9-0f91-460c-b725-6f9db08f7d62" />
+
+
+
 Objective
 
 The goal of this project is to demonstrate the process of performing Exploratory Data Analysis (EDA) on a synthetic classification dataset. EDA is a critical step in the data analysis and machine learning pipeline, providing insights into the dataset's structure, patterns, and potential issues that need addressing before model building.
