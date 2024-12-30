@@ -1,0 +1,61 @@
+# Importing required libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.datasets import make_classification
+# Creating a dataset
+X, y = make_classification(
+    n_samples=1000, n_features=5, n_informative=3, n_redundant=1,
+    n_clusters_per_class=1, random_state=42, class_sep=1.5
+)
+
+# Convert to DataFrame
+columns = ['Feature_1', 'Feature_2', 'Feature_3', 'Feature_4', 'Feature_5']
+df = pd.DataFrame(X, columns=columns)
+df['Target'] = y
+
+# Preview the dataset
+print(df.head())
+# Basic dataset information
+print(df.info())  # Data types and null values
+print(df.describe())  # Summary statistics
+
+# Class distribution
+print("Class Distribution:")
+print(df['Target'].value_counts())
+# Check for missing values
+missing_values = df.isnull().sum()
+print("Missing Values:\n", missing_values)
+# Histograms for all features
+df.hist(bins=20, figsize=(10, 8), edgecolor='black')
+plt.tight_layout()
+plt.suptitle("Feature Distributions", y=1.02)
+plt.show()
+
+# KDE plot for Feature_1 by Target
+sns.kdeplot(data=df, x='Feature_1', hue='Target', fill=True)
+plt.title("Distribution of Feature_1 by Target")
+plt.show()
+# Pairplot for selected features
+sns.pairplot(df, vars=['Feature_1', 'Feature_2', 'Feature_3'], hue='Target')
+plt.suptitle("Pairwise Relationships", y=1.02)
+plt.show()
+
+# Scatter plot for Feature_1 vs. Feature_2
+sns.scatterplot(data=df, x='Feature_1', y='Feature_2', hue='Target', style='Target')
+plt.title("Feature_1 vs. Feature_2")
+plt.show()
+# Compute correlation matrix
+correlation_matrix = df.iloc[:, :-1].corr()
+
+# Plot heatmap
+plt.figure(figsize=(8, 6))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', fmt=".2f")
+plt.title("Correlation Heatmap")
+plt.show()
+# Boxplot for outlier detection
+plt.figure(figsize=(10, 6))
+sns.boxplot(data=df.iloc[:, :-1])
+plt.title("Boxplots of Features")
+plt.show()
